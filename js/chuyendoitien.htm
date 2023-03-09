@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+        <table>
+            <tr>
+                <td>
+                    Amount
+                </td>
+                <td>
+                    from currency
+                </td>
+                <td>
+                    to currency
+                </td>
+                <td>
+
+                </td>
+            </tr>
+            <tr>
+                <td><input type="text" oninput="this.value=this.value.replace(/[^0-9]/g, ''); handleInput(this);" id="convert"></td>
+                <td>
+                    <select name="" id="inp">
+                        <option value="vnd">vnd</option>
+                        <option value="usd">usd</option>
+                    </select>
+                </td>
+                <td>
+                    <select name="" id="outp">
+                        <option value="usd">usd</option>
+                        <option value="vnd">vnd</option>
+                    </select>
+                </td>
+                <td><button id="submit" onclick="oke()">convert</button></td>
+            </tr>
+        </table>
+        <div id="in">
+
+        </div>
+</body>
+</html>
+<script>
+   function oke(){
+    if (document.getElementById("inp").value==document.getElementById("outp").value) {
+        let tien = document.getElementById("submit").value = (document.getElementById("convert").value);
+    document.getElementById("in").innerHTML=tien;
+    } else {
+        if (document.getElementById("inp").value=="usd" && document.getElementById("outp").value=="vnd" ) {
+            let tien = document.getElementById("submit").value = 23000*(document.getElementById("convert").value);
+            document.getElementById("in").innerHTML=tien;
+        } else {
+            let tien = document.getElementById("submit").value = (document.getElementById("convert").value)/23000;
+            document.getElementById("in").innerHTML=tien;
+        }
+    }
+    
+    // alert(tien);
+   }
+</script>
