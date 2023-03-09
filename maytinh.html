@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    button{
+        width: 50px;
+    }
+</style>
+<body>
+     <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    button{
+        width: 50px;
+    }
+</style>
+<body>
+    <div>
+        <input id="ngungu" type="text"  style="width: 368px; ">
+        
+        <table>
+            <tr>
+                <td><button onclick="chonSo('rad')">rad</button></td>
+                <td><button >...</button></td>
+                <td><button>x!</button></td>
+                <td><button>(</button></td>
+                <td><button>)</button></td>
+                <td><button onclick="chonSo('%')">%</button></td>
+                <td><button onclick="ac()">AC</button></td>
+            </tr>
+            <tr>
+                <td><button>INV</button></td>
+                <td><button>SIN</button></td>
+                <td><button>LN</button></td>
+                <td><button onclick="chonSo(7)">7</button></td>
+                <td><button onclick="chonSo(8)">8</button></td>
+                <td><button onclick="chonSo(9)">9</button></td>
+                <td><button onclick="chonSo('/')">/</button></td>
+            </tr>
+            <tr>
+                <td><button>pi</button></td>
+                <td><button>cos</button></td>
+                <td><button>log</button></td>
+                <td><button onclick="chonSo(4)">4</button></td>
+                <td><button onclick="chonSo(5)">5</button></td>
+                <td><button onclick="chonSo(6)">6</button></td>
+                <td><button onclick="chonSo('*')">x</button></td>
+            </tr>
+            <tr>
+                <td><button>e</button></td>
+                <td><button onclick="chonSo('tan')">tan</button></td>
+                <td><button>√</button></td>
+                <td><button onclick="chonSo(1)">1</button></td>
+                <td><button onclick="chonSo(2)">2</button></td>
+                <td><button onclick="chonSo(3)">3</button></td>
+                <td><button onclick="chonSo('-')">-</button></td>
+            </tr>
+            <tr>
+                <td><button>Ans</button></td>
+                <td><button>EXP</button></td>
+                <td><button>x^y</button></td>
+                <td><button onclick="chonSo(0)">0</button></td>
+                <td><button onclick="chonSo('.')">.</button></td>
+                <td><button onclick="ketQua()">=</button></td>
+                <td><button onclick="chonSo('+')">+</button></td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>
+<script ></script>
+<script>
+   function chonSo(so){
+   document.getElementById("ngungu").value += so;
+}
+function ketQua(){
+   document.getElementById("ngungu").value =  eval(document.getElementById("ngungu").value)
+
+
+}
+function ac(){
+   document.getElementById("ngungu").value = '';
+
+
+}
+
+
+
+</script>

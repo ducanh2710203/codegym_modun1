@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body {
+        font-size: 12px;
+    }
+
+    table {
+        text-align: center;
+        border-collapse: collapse;
+    }
+
+    #tic {
+        border: 1px solid silver;
+    }
+
+    .chon {
+        width: 100px;
+    }
+
+    .nenxam {
+        background-color: silver;
+    }
+</style>
+<body>
+<form method="post" action="https://gallery.wufoo.com/embed/pyej3161l9pt0d/def/embedKey=pyej3161l9pt0d89279">
+    <hr>
+    <h1>market research survey</h1>
+    <p>please take a few moments to complete this satisfaction survey.</p>
+    <hr>
+    <h2>what is your age range?</h2>
+    <select name="" id="">
+        <option value="">18-24</option>
+    </select>
+    <h2>What is your yearly income range?</h2>
+
+    <select>
+        <option value="$0 - $25,000">
+            $0 - $25,000
+        </option>
+        <option value="$25,001 - $50,000">
+            $25,001 - $50,000
+        </option>
+        <option value="$50,001 - $100,000">
+            $50,001 - $100,000
+        </option>
+        <option value="$100,000+">
+            $100,000+
+        </option>
+    </select>
+    <h2>Gender Identity</h2>
+    <input type="radio" name="ngu" id=""> Male <br>
+    <input type="radio" name="ngu" id=""> Female <br>
+    <h2>Which of the following products have your purchased in the last 2 months. Please check all that apply.</h2>
+    <input type="checkbox"> Product 1 <br>
+    <input type="checkbox"> Product 2 <br>
+    <input type="checkbox"> Product 3 <br>
+    <h2>How often would you use our new product?</h2>
+    <input type="radio" name="day"> Daily <br>
+    <input type="radio" name="day"> Weekly <br>
+    <input type="radio" name="day"> Monthly <br>
+    <h2>What would you pay for the new product?</h2>
+    <table>
+        <tr>
+            <td>$ <input type="text" style="width: 100px;"></td>
+            <td>. <input type="text" oninput="this.value=this.value.replace(/[^0-9]/g, ''); handleInput(this);"
+                         style="width: 20px;"></td>
+        </tr>
+        <tr>
+            <td style="text-align: center;">Dollars</td>
+            <td>Cents</td>
+        </tr>
+    </table>
+    <h2>What features would you like to see in the new product.</h2>
+    <textarea name="" id="" cols="90" rows="9"></textarea>
+    <p>please rate your level of agreemant with the following statements</p>
+    <table id="tic">
+        <tr id="tic" class="nenxam">
+            <td id="tic" style="width: 200px;"></td>
+            <td id="tic" class="chon">Strongly Disagree</td>
+            <td id="tic" class="chon">Disagree</td>
+            <td id="tic" class="chon">agree</td>
+            <td id="tic" class="chon">Strongly agree</td>
+        </tr id="tic">
+        <tr id="tic">
+            <th id="tic">Our products are priced fairly
+            </td>
+            <td id="tic"><input type="radio" name="tick" id=""> <br> 1</td>
+            <td id="tic"><input type="radio" name="tick" id=""> <br> 2</td>
+            <td id="tic"><input type="radio" name="tick" id=""> <br> 3</td>
+            <td id="tic"><input type="radio" name="tick" id=""> <br> 4</td>
+        </tr id="tic">
+        <tr id="tic" class="nenxam">
+            <th id="tic">Our products are high quanlity
+            </td>
+            <td id="tic"><input type="radio" name="tick" id=""> <br> 1</td>
+            <td id="tic"><input type="radio" name="tick" id=""> <br> 2</td>
+            <td id="tic"><input type="radio" name="tick" id=""> <br> 3</td>
+            <td id="tic"><input type="radio" name="tick" id=""> <br> 4</td>
+        </tr>
+        <tr>
+            <th id="tic">you would recommend our product to a friend or conworked
+            </td>
+            <td id="tic"><input type="radio" name="tick" id=""> <br> 1</td>
+            <td id="tic"><input type="radio" name="tick" id=""> <br> 2</td>
+            <td id="tic"><input type="radio" name="tick" id=""> <br> 3</td>
+            <td id="tic"><input type="radio" name="tick" id=""> <br> 4</td>
+        </tr>
+    </table>
+    <input type="submit" value="submit">
+</form>
+</body>
+</html>
