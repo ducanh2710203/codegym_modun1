@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body onload="doc">
+    <img src="https://i.ytimg.com/vi/MhLC8JQ0Da4/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLB14H-6W5FjHl8tzvE1vdG5MFV5wQ"
+        style="position: absolute;left: 0;top: 0;" id="newimg">
+</body>
+
+</html>
+<script>
+
+    function up() {
+        let oj = document.getElementById("newimg");
+        oj.style.top = parseInt(oj.style.top) - 10 + 'px';
+    }
+    function down() {
+        var oj = document.getElementById("newimg");
+        oj.style.top = parseInt(oj.style.top) + 10 + 'px';
+    }
+    function left() {
+        var oj = document.getElementById("newimg");
+        oj.style.left = parseInt(oj.style.left) - 10 + 'px';
+    }
+    function right() {
+        var oj = document.getElementById("newimg");
+        oj.style.left = parseInt(oj.style.left) + 10 + 'px';
+    }
+    // function move(evt) {
+    //     switch (evt.keyCode) {
+    //         case 87:
+    //         up();
+    //             break;
+    //         case 83:
+    //         down();
+    //             break;
+    //         case 65:
+    //         left();
+    //             break;
+    //         case 68	:
+    //         right();
+    //             break;        
+    //     }
+    // }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    // function uppx() {
+    //     let element = document.getElementById("newimg");
+    //     element.style.top = parseInt(element.style.top) - 5 + 'px';
+    // }
+    // function dowpx() {
+    //     var element = document.getElementById("newimg");
+    //     element.style.top = parseInt(element.style.top) + 5 + 'px';
+    // }
+    // function leftpx() {
+    //     var element = document.getElementById("newimg");
+    //     element.style.left = parseInt(element.style.left) - 5 + 'px';
+    // }
+    // function rightpx() {
+    //     var element = document.getElementById("newimg");
+    //     element.style.left = parseInt(element.style.left) + 5 + 'px';
+
+    // }
+    function move(evt) {
+        switch (evt.keyCode) {
+            case 37:
+                left();
+                break;
+            case 39:
+                right();
+                break;
+            case 38:
+                up();
+                break;
+            case 40:
+                down();
+                break;
+        }
+    }
+    // function docReady() {
+    //     window.addEventListener('keydown', move);
+    // }
+    function doc() {
+        window.addEventListener('keydown', move);
+    }
+
+
+</script>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div style="float: left;">
+        <h1>số tiền điện</h1> <input type="text" name="" id="num_electric">
+    </div>
+    <div style="float: left;">
+        <h1>số tiền phải trả</h1> <input type="text" name="" id="money">
+    </div>
+    <h1><input type="button" value="ngu" onclick="click1()"></h1>
+</body>
+
+</html>
+<!-- Bậc 1 (0 đến 50kWh): 1.678 đồng/kWh.
+Bậc 2 (51 đến 100kWh): 1.734 đồng/kWh.
+Bậc 3 (101 đến 200 kWh): 2.014 đồng/kWh.
+Bậc 4 (201 đến 300 kWh): 2.536 đồng/kWh.
+Bậc 5 (301 đến 400 kWh): 2.834 đồng/kWh.
+Bậc 6 (401 kWh trở lên): 2.927 đồng/kWh. -->
+<script>
+
+
+
+    function click1() {
+        let num_dien = document.getElementById("num_electric")
+        if (num_dien < 50) {
+            document.getElementById("money").value = parseInt(document.getElementById("num_electric").value) * 1.678;
+        } else {
+            if (num_dien < 100) {
+                document.getElementById("money").value = parseInt(document.getElementById("num_electric").value) * 1.734;
+            } else {
+                if (num_dien < 200) {
+                    document.getElementById("money").value = parseInt(document.getElementById("num_electric").value) * 2.014;
+                } else {
+                    if (num_dien < 300) {
+                        document.getElementById("money").value = parseInt(document.getElementById("num_electric").value) * 2.536;
+                    } else {
+                        if (num_dien < 400) {
+                            document.getElementById("money").value = parseInt(document.getElementById("num_electric").value) * 2.834;
+                        } else {
+                            document.getElementById("money").value = parseInt(document.getElementById("num_electric").value) * 2.927;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+</script>

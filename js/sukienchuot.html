@@ -8,8 +8,8 @@
 </head>
 <body>
     <form >
-        <!-- <img src="https://i.ytimg.com/vi/rsEf5b3BHO0/hqdefault.jp?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLA5crhFfk8oy_tmjXzE4XE_NnAv0A" id="myimg" alt=""> -->
-        <span id="myimg">c</span>                                                     <span style="margin-left: 50px;">ode</span>
+        <img src="https://i.ytimg.com/vi/rsEf5b3BHO0/hqdefault.jp?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLA5crhFfk8oy_tmjXzE4XE_NnAv0A" id="myimg" alt="">
+
         <p>ấn vào nút</p>
         <input type="button" value="Click Me" onclick="moveRight();" />
         <input type="reset" onclick="set()" value="làm lại">
@@ -17,17 +17,18 @@
 </body>
 </html>
 <script>
-let anh = document.getElementById('myimg');
+let anh = document.getElementById("myimg");
 function init(){
-    anh = document.getElementById('myimg');
-    anh.style.position = 'relative';
-    anh.style.left = '0px';
+    console.log(anh);
+    //anh = document.getElementById("myimg");
+    anh.style.marginTop = '0px';
+    anh.style.marginLeft = '0'
 }
 function moveRight(){
-    anh.style.left = parseInt(anh.style.left) + 10 + 'px';
+    anh.style.marginLeft = parseInt(anh.style.marginLeft) + 10 + 'px';
 }
 function set(){
-    anh.style.left = parseInt(anh.style.left) - 10 + 'px';
+    anh.style.marginLeft = parseInt(anh.style.marginLeft) - 10 + 'px';
 }
 window.onload = init;
 
