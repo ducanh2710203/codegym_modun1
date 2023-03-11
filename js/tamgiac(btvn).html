@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+    let a  = +prompt("nhập đồ dài cạnh a");
+    let b  = +prompt("nhập đồ dài cạnh b");
+    let c  = +prompt("nhập đồ dài cạnh c");
+    if ((a+b)>c && (a+c)>b && (c+b)>a) {
+        if (a==b && b == c) {
+            alert("tam giac đều");
+
+        } else {
+            if (a==b||a==c||b==c) {
+                alert("tam giấc cân");
+            } else {
+                if (Math.pow(a,2)+Math.pow(b,2)==Math.pow(c,2) || Math.pow(a,2)+Math.pow(c,2)==Math.pow(b,2) || Math.pow(c,2)+Math.pow(b,2)==Math.pow(a,2)) {
+                    alert("là tam giác vuông")
+                } else {
+                    alert("là tam giác thui")
+                }
+            }
+        }
+    } else {
+        alert("không là ba cạnh của tam giác");
+    }
+</script>

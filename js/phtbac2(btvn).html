@@ -1,0 +1,39 @@
+<!-- Giải phương trình bậc hai: Viết chương trình sử dụng cấu trúc điều kiện để giải phương trình bậc hai có dạng ax^2 + bx + c = 0 với các hệ số a, b, c là các số nguyên đã cho. Nếu phương trình có nghiệm, in ra các nghiệm của nó -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+
+</html>
+<script>
+    let a = +prompt("nhập  a");
+    let b = +prompt("nhập  b");
+    let c = +prompt("nhập  c");
+    let delta = b * b - 4 * a * c;
+    let x1, x2;
+    if (delta<0) {
+        alert("pt vô nghiện")
+    } else {
+        if (delta == 0) {
+        x1 = x2 = -b / (2 * a);
+        alert( "phuong trinh có nghiện :"+x1);
+        alert( "phuong trinh có nghiện :"+x2);
+    } else {
+        let z = Math.sqrt(delta);
+        x1 = (-b + z) / (2 * a);
+        x2 = (-b - z) / (2 * a);
+        alert( "phuong trinh có nghiện :"+x1);
+        alert( "phuong trinh có nghiện :"+x2);
+    }
+    }
+    
+</script>
