@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        width: 200px;
+        margin: auto;
+    }
+    table{
+        width: 180px;
+        margin: auto;
+        border: 5px solid black;
+    }
+    button{
+        width: 25px;
+    }
+</style>
+<body>
+    <table >
+        <tr><td colspan="4"><input type="text" style="width: 150px;"id="hup"></td></tr>
+        <tr>
+            <td><button onclick="chonso(1)">1</button></td>
+            <td><button onclick="chonso(2)">2</button></td>
+            <td><button onclick="chonso(3)">3</button></td>
+            <td><button onclick="chonso('+')">+</button></td>
+        </tr>
+        <tr>
+            <td><button onclick="chonso(4)">4</button></td>
+            <td><button onclick="chonso(5)">5</button></td>
+            <td><button onclick="chonso(6)">6</button></td>
+            <td><button onclick="chonso('-')">-</button></td>
+        </tr>
+        <tr>
+            <td><button onclick="chonso(7)">7</button></td>
+            <td><button onclick="chonso(8)">8</button></td>
+            <td><button onclick="chonso(9)">9</button></td>
+            <td><button onclick="chonso('*')">x</button></td>
+        </tr>
+        <tr>
+            <td><button onclick="c()">C</button></td>
+            <td><button onclick="chonso(0)">0</button></td>
+            <td><button onclick="ketqua()">=</button></td>
+            <td><button onclick="chonso('/')">/</button></td>
+        </tr>
+    </table>
+</body>
+</html>
+<script>
+    function chonso(bu) {
+        document.getElementById("hup").value += bu ;
+        console.log(bu);
+    }
+    function ketqua() {
+        document.getElementById("hup").value = eval(document.getElementById("hup").value);
+    }
+    function c() {
+        document.getElementById("hup").value = "";
+    }
+</script>

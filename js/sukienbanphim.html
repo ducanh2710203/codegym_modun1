@@ -1,15 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body onload="docReady()">
-    <img src="https://i.ytimg.com/vi/D164TFHeOcI/hqdefault.jpg?sqp=-oaymwE1CKgBEF5IVfKriqkDKAgBFQAAiEIYAXABwAEG8AEB-AH-CYAC0AWKAgwIABABGFAgZShgMA8=&rs=AOn4CLBhj-0xOIl9tXR2a6eT7XwUueLGVQ" style="position: absolute; left: 0;top: 0;" id="anh" alt="">
+    <img src="https://i.ytimg.com/vi/D164TFHeOcI/hqdefault.jpg?sqp=-oaymwE1CKgBEF5IVfKriqkDKAgBFQAAiEIYAXABwAEG8AEB-AH-CYAC0AWKAgwIABABGFAgZShgMA8=&rs=AOn4CLBhj-0xOIl9tXR2a6eT7XwUueLGVQ"
+        style="position: absolute; left: 0;top: 0;" id="anh" alt="">
 
 </body>
+
 </html>
 <script>
     function up() {
@@ -28,11 +32,11 @@
         var obj = document.getElementById("anh");
         obj.style.left = parseInt(obj.style.left) + 10 + 'px';
     }
-    function move(evt){
+    function move(evt) {
         switch (evt.keyCode) {
             case 65:
-             left();
-             break;
+                left();
+                break;
             case 68:
                 right();
                 break;
@@ -42,28 +46,11 @@
             case 83:
                 down();
                 break;
-            
+
         }
 
     }
 
-    // function move(evt) {
-    //     switch (evt.keyCode) {
-    //     case 65:
-    //         left();
-    //         break;
-    //     case 68:
-    //         right();
-    //         break;
-    //     case 87:
-    //         up();
-    //         break;
-    //     case 83:
-    //         down();
-    //         break;
-    // }
-        
-    //}
     function docReady() {
         document.addEventListener('keydown', move);
     }
