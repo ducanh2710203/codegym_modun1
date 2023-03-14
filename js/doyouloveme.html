@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body {
+        width: 400px;
+        height: 500px;
+        margin: auto;
+        margin-bottom: auto;
+    }
+    #no{
+        margin-top: 80px;
+    }
+</style>
+
+<body>
+    <h1>Do you love me</h1>
+    <button onclick="clickyes()"  > yes</button>   
+    <button id="no" style="position: absolute; top: 0px;" onmousemove="mousemove()"> no</button>
+</body>
+
+</html>
+<script>
+    function init() {
+        document.getElementById("no").style.Top = "0px";
+        document.getElementById("no").style.Left = "0px";
+    }
+    function clickyes() {
+        alert("chơi mẹ nhau đi");
+
+    }
+    function mousemove() {
+   
+
+        document.getElementById("no").style.marginTop = parseInt(document.getElementById("no").style.top) + parseInt(Math.floor(Math.random() * 500)) + 'px'
+         document.getElementById("no").style.marginTop = parseInt(document.getElementById("no").style.top) + parseInt(Math.floor(Math.random() * 500)) + 'px'
+         document.getElementById("no").style.marginLeft = parseInt(document.getElementById("no").style.top) + parseInt(Math.floor(Math.random() * 400)) + 'px'
+        document.getElementById("no").style.marginRight = parseInt(document.getElementById("no").style.top) + parseInt(Math.floor(Math.random() * 400)) + 'px'
+        console.log(document.getElementById("no"));
+        
+
+    }
+    window.onload = init();
+
+
+</script>
