@@ -11,21 +11,27 @@
 </body>
 </html>
 <script>
-  let num = +prompt("nhập số lượng số nguyên tố");
-  let dem=0;
-  for (let i = 2; i < num; i++) {
-   for (let j = 1; j < (i-1); j++) {
-    if (i%j==0) {
-      false
-    } 
-    true
-    dem++;
-   }
-    if (dem>2) {
-      false
-    } else {
-      
-      console.log(i);
+  function numnSNT(num) {
+    if (num<2) {
+      return false
     }
+    for (let i = 0; i < num-1; i++) {
+      if (num%i==0) {
+        return false
+      }
+    }
+    return true;
+  }
+  let input = +prompt("nhập số sô nto cần in ra")
+  let dem=0;
+  let n=2;
+  
+  while (dem < input) {
+    if (numnSNT(n)) {
+      document.write(n +'<br>');
+      dem++;
+      console.log(n);
+    }
+    n++
   }
 </script>
