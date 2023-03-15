@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input id="elementarray" type="text">  
+    <input type="button" value="add" onclick="add()">
+    <input type="button" value="display" onclick="print()">
+    <div id="printarray"></div>
+</body>
+</html>
+<script>
+  let array = new Array();
+        let x=0;
+   
+    function add() {
+        
+        array[x] = document.getElementById("elementarray").value;
+    alert("Element: " + array[x] );
+    x++;
+    document.getElementById("elementarray ").value = "";
+    
+    }
+    // function print() {
+    //     for (let index = 0; index < array.length; index++) {
+    //         console.log(index);
+    //         document.write( "Element array["+index+"]   : "+ array[index]+"<br>");
+            
+    //     }
+    // }
+
+</script>
