@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+    // Tạo canvas element
+var canvas = document.createElement("canvas");
+canvas.width = 200;
+canvas.height = 200;
+
+// Lấy context của canvas
+var context = canvas.getContext("2d");
+
+// Vẽ hình trái tim
+context.beginPath();
+context.moveTo(100, 50);
+context.bezierCurveTo(50, 0, 00, 0, 50, 35);
+context.bezierCurveTo(50, 0, 0, 0, 0, 50);
+context.bezierCurveTo(0, 100, 100, 150, 100, 200);
+context.bezierCurveTo(100, 150, 200, 100, 200, 50);
+context.bezierCurveTo(200, 0, 150, 0, 100, 50);
+context.closePath();
+
+// Đặt màu sắc và đổ màu sắc vào hình vẽ
+context.fillStyle = "red";
+context.fill();
+
+// Thêm canvas vào trang web
+document.body.appendChild(canvas);
+</script>
