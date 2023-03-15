@@ -17,16 +17,25 @@
     function play() {
         let ngu = +prompt("nhập khoảng để đoán");
         let random = +Math.floor(Math.random() * ngu);
+        let dem = 0;
         do {
             console.log(random);
             let bu = +prompt("nhập số bn chọn")
-            
+            if (dem<3) {
+                
             if (random == bu) {
                 alert("đúng r e");
                 break;
             } else {
                 alert("ngu");
+                dem ++
             }
+            } else {
+               alert("bạn đã hết lần đoán") 
+               break;
+            }
+            
+
             
         } while ("random" != "bu");
 
