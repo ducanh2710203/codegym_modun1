@@ -25,12 +25,14 @@
     document.getElementById("elementarray ").value = "";
     
     }
-    // function print() {
-    //     for (let index = 0; index < array.length; index++) {
-    //         console.log(index);
-    //         document.write( "Element array["+index+"]   : "+ array[index]+"<br>");
+    function print() {
+        let st = "";
+        for (let index = 0; index < array.length; index++) {
+            console.log(index);
+            st= st + "Element array["+index+"]   : "+ array[index]+"<br>";
+            document.getElementById("printarray").innerHTML= st
             
-    //     }
-    // }
+        }
+    }
 
 </script>
