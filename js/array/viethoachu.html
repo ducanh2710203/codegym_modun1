@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input id="elementarray" type="text">  
+    <input type="button" value="add" onclick="add()">
+    <input type="button" value="display" onclick="print()">
+    <div id="xuat"></div>
+    
+</body>
+
+</html>
+<script>
+    function add() {
+        let x=0;
+
+    }
+    function print() {
+        let A = document.getElementById("elementarray").value
+    A = A.split("")
+    let str = "<hr>"
+    
+    for (let i = 0; i < A.length; i++) {
+        if (A[i]===A[i].toLowerCase()) {
+            A[i] = A[i].toUpperCase()
+        } else {
+            if (A[i]===A[i].toUpperCase()) {
+                A[i] = A[i].toLowerCase()
+            }
+        }   
+        
+        str = str + A[i] ;
+    document.getElementById("xuat").innerHTML = str+ "<br>"  
+    }
+    
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    // let str = 'aAbBcCdD'
+    // str = str.split("")
+    // for(let i = 0 ; i < str.length; i ++){
+    //         if(str[i]=== str[i].toLowerCase()){
+    //                 str[i] = str[i].toUpperCase()
+                
+    //         }
+    //         else if(str[i] === str[i].toUpperCase()){
+    //             str[i] = str[i].toLowerCase()
+    //         }
+    // }
+    // console.log(str);
+   
+</script>
