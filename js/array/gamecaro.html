@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+<h1>Caro Game Simple</h1>
+<div id="play"></div>
+<input type="button" onclick="change()" value="change value">
+</body>
+
+</html>
+<script>
+    let A = [];
+    let str = ""
+    for (let i = 0; i < 5; i++) {
+        A[i] = new Array(0, 0, 0, 0, 0)
+    }
+    console.log(A)
+    for (let i = 0; i < 5; i++) {
+        str = str + "<br/>"
+        for (let j = 0; j < 5; j++) {
+            str = str + A[i][j] + "&nbsp"
+        }
+    }
+    document.getElementById("play").innerHTML = str;
+    // let A = [];
+    // let str = "";
+    // for (let i = 0; i < 5; i++) {
+    //     A[i] = new Array(0, 0, 0, 0, 0);
+    // }
+    //
+    // for (let i = 0; i < 5; i++) {
+    //     str += "<br/>";
+    //     for (let j = 0; j < 5; j++) {
+    //         str += A[i][j] + "&nbsp;&nbsp;";
+    //     }
+    // }
+    // document.getElementById("play").innerHTML = str;
+
+
+    function change() {
+        let X = prompt("X: ");
+        let Y = prompt("Y: ");
+        str = ""
+        A[X][Y] = "x"
+        for (let i = 0; i < 5; i++) {
+            console.log(A)
+        }
+        for (let i = 0; i < 5; i++) {
+            str = str + "<br/>"
+            for (let j = 0; j < 5; j++) {
+                str = str + A[i][j] + "&nbsp"
+            }
+        }
+        document.getElementById("play").innerHTML = str;
+    }
+</script>
