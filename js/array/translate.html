@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<label for="nhap">eng</label>
+<input type="text" name="nhap" id="tu">
+
+<button onclick="ngu()">dịch</button>
+<p><hr width="200px" style="flex: auto"></p>
+<label for="dich">vn</label>
+<input type="text" name="dich" id="dich">
+
+</body>
+</html>
+<script>
+
+    let Eng = ['pen', 'apple', 'new', 'yes']
+    let vn = ['bút', 'táo', 'mới', 'đúng']
+    function ngu() {
+        let b = document.getElementById("tu").value
+        let find = Eng.indexOf(b)
+        document.getElementById("dich").value = vn[find]
+        document.getElementById("tu").value = ""
+    }
+</script>

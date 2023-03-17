@@ -16,12 +16,17 @@
 <script>
     let a = +prompt("nhập giá trị cần tìm trong mảng");
     let array = [2, 3, 4, 5, 6, 7];
-    for (let i = 0; i < array.length; i++) {
-        console.log(array[i]);
-        if (a == array[i]) {
-            alert("giá trị " + array[i] + " nằm trong mảng");
-            break;
-        } 
-        
-    }
+    // for (let i = 0; i < array.length; i++) {
+    //     console.log(array[i]);
+    //     if (a == array[i]) {
+    //         alert("giá trị " + array[i] + " nằm trong mảng");
+    //         break;
+    //     }
+    //
+    // }
+    let indexof = array.indexOf(a)
+    if (indexof !== -1){
+        alert("co trong mang")
+
+    }else alert("ko co trong mang")
 </script>
