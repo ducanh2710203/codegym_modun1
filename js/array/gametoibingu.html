@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+*Use tab to switch the messages <br>
+<textarea name="" id="txt" cols="30" rows="6"></textarea>
+</body>
+</html>
+<script>
+    //use tab key to prank someone
+    let strs = [
+        "đánh nhau không ",
+        "I'm cool!"
+    ];
+
+    let t = $('#txt'),
+        str = strs[0],
+        len = str.length,
+        on = false;
+
+    t.keydown(function (e) {
+        let l = t.val().length % len + 1;
+
+        if (e.which == 9) {
+            str = strs[(on = !on) | 0];
+            len = str.length;
+        }
+
+        t.val(str.substr(0, l));
+        e.preventDefault();
+    })
+</script>
