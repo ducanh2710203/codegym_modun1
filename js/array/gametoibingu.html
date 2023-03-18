@@ -7,29 +7,29 @@
 <body>
 *Use tab to switch the messages <br>
 <textarea name="" id="txt" cols="30" rows="6"></textarea>
-</body>
-</html>
 <script>
     //use tab key to prank someone
-    let strs = [
-        "đánh nhau không ",
-        "I'm cool!"
+    var strs = [
+        "đức anh chin to hơi ngô phong       ",
+        "đánh nhau không                     "
     ];
 
-    let t = $('#txt'),
+    var t = document.getElementById('txt'),
         str = strs[0],
         len = str.length,
         on = false;
 
-    t.keydown(function (e) {
-        let l = t.val().length % len + 1;
+    t.addEventListener("keydown",function(e) {
+        var l = t.value.length % len + 1;
 
         if (e.which == 9) {
             str = strs[(on = !on) | 0];
             len = str.length;
         }
 
-        t.val(str.substr(0, l));
+        t.value =str.substr(0, l);
         e.preventDefault();
     })
 </script>
+</body>
+</html>
