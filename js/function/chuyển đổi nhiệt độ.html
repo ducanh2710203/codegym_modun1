@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<label for="nhiệt độ ">nhập nhiệt độ</label>
+<input type="text" oninput="value1()" id="nhiệt độ ">
+<p id="inra"></p>
+</body>
+</html>
+<script !src="">
+    let print = document.getElementById("inra")
+
+    function value1() {
+        console.log(document.getElementById("nhiệt độ ").value)
+        print.innerHTML = "Celsius:" + parseInt(document.getElementById("nhiệt độ ").value) * (-17, 22222222)
+
+    }
+</script>
