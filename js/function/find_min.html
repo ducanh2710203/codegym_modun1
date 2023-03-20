@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script !src="">
+    let arr1 = [1, 2, 34, 54, 6, 12, 3]
+    let arr2 = [2, 3, 56, 64, 3, 45, 3]
+    let arr3 = [3, 4, 54, 1, 67, 56, 0]
+    let arr4 = [21, 54, 87, 21, 65, 98]
+
+    function find_min(a) {
+        let min = a[0]
+        for (let i = 0; i < a.length; i++) {
+            if (min > a[i]) {
+                min = a[i]
+            }
+        }
+      console.log(min)
+    }
+    find_min(arr1)
+    find_min(arr3)
+
+</script>
