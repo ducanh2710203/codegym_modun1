@@ -21,6 +21,9 @@
     tr:nth-child(even){
         background-color: silver;
     }
+    span{
+        color: red;
+    }
 </style>
 <body>
 
@@ -30,7 +33,7 @@
 
     <button onclick="addProduct()"> add</button>
 </div>
-<h2>display all product <span id="num"></span></h2>
+<h2>display all product &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp <span id="num">0 product</span></h2>
 
 <h3>product name</h3>
 <p id="result"></p>
@@ -43,11 +46,11 @@
     function addProduct() {
         let inp = document.getElementById("new1").value
         arr.push(inp)
-
-        inra()
+        document.getElementById("num").innerHTML = arr.length+" product"
+        print()
     }
 
-    function inra() {
+    function print() {
         let str = ''
         str += "<table>"
         for (let i = 0; i < arr.length; i++) {
@@ -62,7 +65,7 @@
         console.log(arr)
         arr[index] = prompt("edit")
         console.log(arr)
-        inra()
+        print()
     }
 
     function deleteProduct(index) {
@@ -70,10 +73,11 @@
         if (commit) {
             arr.splice(index, 1)
         }
-        inra()
+        document.getElementById("num").innerHTML = arr.length+" product"
+        print()
     }
 
-    document.getElementById("num").innerHTML = arr.length
+
 
 
     // let arr = []
