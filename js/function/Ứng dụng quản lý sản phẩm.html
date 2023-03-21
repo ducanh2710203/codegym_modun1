@@ -4,17 +4,76 @@
     <meta charset="UTF-8">
     <title>Title</title>
 </head>
+<style>
+    button{
+       background-color: green;
+       color: white;
+        border-radius: 3px;
+        border: white;
+    }
+    td
+    {
+        width: 100px;
+    }
+</style>
 <body>
-<h1>add new product</h1>
-<input type="text" name="input"  placeholder="new product" id="new1">
 
-<button onclick="addProduct()"> add</button>
-<h2>display all product</h2>
+    <h1>add new product</h1>
+    <div  style=" background-color: silver;text-align: center; width: 300px;height: 50px; padding-top: 30px;border-radius: 3px">
+    <input  type="text" name="input"  placeholder="new product" id="new1">
+
+    <button onclick="addProduct()"> add</button>
+    </div>
+    <h2>display all product          <span id="num"></span></h2>
+
 <h3>product name</h3>
 <p id="result"></p>
 </body>
 </html>
 <script !src="">
+
+        let arr = []
+
+        function addProduct() {
+            let inp = document.getElementById("new1").value
+            arr.push(inp)
+
+                inra()
+        }
+        function inra() {
+            let str = ''
+            str += "<table>"
+            for (let i = 0; i < arr.length; i++) {
+                str += "<tr>"
+                str += `<td>`+arr[i]+`<td><button onclick="editProduct(${i})">edit</button>`+`<td><button onclick="deleteProduct(${i})">delete</button>`+"<br>"
+            }
+            document.getElementById("result").innerHTML= str
+            document.getElementById("new1").value = ""
+        }
+        function editProduct(index) {
+            console.log(arr)
+                arr[index] = prompt("edit")
+            console.log(arr)
+            inra()
+        }
+        function deleteProduct(index) {
+            let commit = confirm("mày có muốn xóa??")
+            if (commit){
+                arr.splice(index,1)
+            }
+            inra()
+        }
+        document.getElementById("num").innerHTML= arr.length
+
+
+
+
+
+
+
+
+
+
 
         // let arr = []
         // function addProduct() {
