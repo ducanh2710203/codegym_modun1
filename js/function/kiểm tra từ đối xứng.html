@@ -10,7 +10,12 @@
 </html>
 <script !src="">
   function isPalindrom (str) {
-    return str == str.split('').reverse().join('');
+      if (str.split('').length%2===0){
+          return str == str.split('').reverse().join('');
+      }else {
+          return false;
+      }
+
   }
 
   let A= prompt("nhâp ký tụ ")
