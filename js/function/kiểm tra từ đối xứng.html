@@ -9,15 +9,13 @@
 </body>
 </html>
 <script !src="">
-  function isPalindrom (str) {
-      if (str.split('').length%2===0){
-          return str == str.split('').reverse().join('');
-      }else {
-          return false;
-      }
+    function isPalindrom(str) {
 
-  }
+        return str == str.split('').reverse().join('');
 
-  let A= prompt("nhâp ký tụ ")
-  document.write(isPalindrom(A))
+
+    }
+
+    let A = prompt("nhâp ký tụ ")
+    document.write(isPalindrom(A))
 </script>
