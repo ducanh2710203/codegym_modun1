@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script !src="">
+    class Date {
+        day ;
+        month;
+        year;
+        constructor(day,month,year) {
+            this.day = day;
+            this.month = month;
+            this.year = year;
+        }
+
+
+        getday() {
+            return this.day;
+        }
+
+        setday(value) {
+            this.day = value;
+        }
+
+        getmonth() {
+            return this.month;
+        }
+
+        setmonth(value) {
+            this.month = value;
+        }
+
+        getyear() {
+            return this.year;
+        }
+
+
+        setyear(value) {
+            this.year = value;
+        }
+    }
+    let newDate = new Date(1,1,1900)
+
+
+    alert(newDate.getday()+"/"+newDate.getmonth()+"/"+newDate.getyear())
+</script>
