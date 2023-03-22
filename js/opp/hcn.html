@@ -10,8 +10,35 @@
 
 </html>
 <script !src="">
-    let hcn = document.getElementById("myCanvas").getContext("2d")
-    hcn.beginPath();
-    hcn.fillStyle= "red"
-    hcn.fillRect(60,10,150,30)
+    class Rectangle {
+        constructor(x,y) {
+            this.x = x
+            this.y =y
+        }
+
+        creathcn(){
+        let hcn = document.getElementById("myCanvas").getContext("2d")
+        hcn.beginPath();
+        hcn.fillStyle= "red"
+        hcn.fillRect(60,10,this.x,this.y)
+    }
+        acreage(){
+
+            return rectangle.x * rectangle.y
+
+        }
+
+        perimeter(){
+            let z = (rectangle.x+rectangle.y)*2
+            return z
+
+    }
+
+    }
+
+    let rectangle = new Rectangle(1200,20)
+    rectangle.creathcn()
+    document.write("<br>"+"diện tích "+ rectangle.acreage()+"<br>")
+    document.write("chu vi "+ rectangle.perimeter())
+
 </script>
