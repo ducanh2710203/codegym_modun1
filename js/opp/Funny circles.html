@@ -27,8 +27,8 @@
 
         createCircle() {
             let tr = document.getElementById("myCanvas").getContext("2d");
-            let top = Math.random() * 1500
-            let left = Math.random() * 800
+            let top = Math.random() * innerWidth
+            let left = Math.random() * innerHeight
             let r = Math.random() * 100
             tr.beginPath();
             tr.fillStyle = this.getrandomcolor()
@@ -38,7 +38,7 @@
         }
     }
 
-    for (let i = 0; i < 100; i++) {
+    for (let i = 0; i < 150; i++) {
         let circlei = new Circle(1, 500, 80);
         circlei.createCircle();
     }
