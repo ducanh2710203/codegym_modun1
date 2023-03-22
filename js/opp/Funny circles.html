@@ -16,18 +16,20 @@
             this.y = y
             this.radius = radius
         }
-        getrandomcolor(){
 
-            let Yellow = Math.random()*255
-            let violet = Math.random()*255
-            let red = Math.random()*255
-            return "rgb("+Yellow+","+violet+","+red+")"
+        getrandomcolor() {
+
+            let Yellow = Math.random() * 255
+            let violet = Math.random() * 255
+            let red = Math.random() * 255
+            return "rgb(" + Yellow + "," + violet + "," + red + ")"
         }
-         createCircle(){
+
+        createCircle() {
             let tr = document.getElementById("myCanvas").getContext("2d");
-            let top = Math.random()*1500
-            let left = Math.random()*800
-            let r = Math.random()*100
+            let top = Math.random() * 1500
+            let left = Math.random() * 800
+            let r = Math.random() * 100
             tr.beginPath();
             tr.fillStyle = this.getrandomcolor()
             tr.arc(top, left, r, 0, 2 * Math.PI);
@@ -35,75 +37,11 @@
             tr.closePath();
         }
     }
-    let circle= new Circle(1, 500, 80);
-    let circle1= new Circle(1, 1, 80);
-    let circle2= new Circle(1, 1, 80);
-    let circle3= new Circle(1, 1, 80);
-    let circle4= new Circle(1, 1, 80);
-    let circle5= new Circle(1, 1, 80);
-    let circle6= new Circle(1, 1, 80);
-    let circle7= new Circle(1, 1, 80);
-    let circle8= new Circle(1, 1, 80);
-    let circle11= new Circle(1, 1, 80);
-    let circle12= new Circle(1, 1, 80);
-    let circle13= new Circle(1, 1, 80);
-    let circle14= new Circle(1, 1, 80);
-    let circle15= new Circle(1, 1, 80);
-    let circle16= new Circle(1, 1, 80);
-    let circle17= new Circle(1, 1, 80);
-    let circle18= new Circle(1, 1, 80);
-    let circle110= new Circle(1, 500, 80);
-    let circle111= new Circle(1, 1, 80);
-    let circle112= new Circle(1, 1, 80);
-    let circle113= new Circle(1, 1, 80);
-    let circle114= new Circle(1, 1, 80);
-    let circle115= new Circle(1, 1, 80);
-    let circle116= new Circle(1, 1, 80);
-    let circle117= new Circle(1, 1, 80);
-    let circle118= new Circle(1, 1, 80);
-    let circle1111= new Circle(1, 1, 80);
-    let circle1112= new Circle(1, 1, 80);
-    let circle1113= new Circle(1, 1, 80);
-    let circle1114= new Circle(1, 1, 80);
-    let circle1115= new Circle(1, 1, 80);
-    let circle1116= new Circle(1, 1, 80);
-    let circle1117= new Circle(1, 1, 80);
-    let circle1118= new Circle(1, 1, 80);
-11
+
+    for (let i = 0; i < 100; i++) {
+        let circlei = new Circle(1, 500, 80);
+        circlei.createCircle();
+    }
 
 
-    circle.createCircle();
-    circle1.createCircle();
-    circle2.createCircle();
-    circle3.createCircle();
-    circle4.createCircle();
-    circle5.createCircle();
-    circle6.createCircle();
-    circle7.createCircle();
-    circle8.createCircle();
-    circle11.createCircle();
-    circle12.createCircle();
-    circle13.createCircle();
-    circle14.createCircle();
-    circle15.createCircle();
-    circle16.createCircle();
-    circle17.createCircle();
-    circle18.createCircle();
-    circle110.createCircle();
-    circle111.createCircle();
-    circle112.createCircle();
-    circle113.createCircle();
-    circle114.createCircle();
-    circle115.createCircle();
-    circle116.createCircle();
-    circle117.createCircle();
-    circle118.createCircle();
-    circle1111.createCircle();
-    circle1112.createCircle();
-    circle1113.createCircle();
-    circle1114.createCircle();
-    circle1115.createCircle();
-    circle1116.createCircle();
-    circle1117.createCircle();
-    circle1118.createCircle();
 </script>
