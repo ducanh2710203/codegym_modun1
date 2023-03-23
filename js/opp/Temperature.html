@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body><label for="text"> temperature switch <br></label>
+<input type="text" oninput="change()" id="text">
+<p id="print"></p>
+</body>
+</html>
+<script !src="">
+    class C {
+        Temperature;
+
+        constructor(Temperature) {
+            this.Temperature = Temperature;
+
+        }
+
+        K() {
+            let kenvin = this.Temperature * 11.926;
+            return kenvin
+        }
+
+        F() {
+            let Fahrenheit = this.Temperature * 3.08
+            return Fahrenheit
+        }
+
+    }
+
+
+    function change() {
+        let dc = new C(document.getElementById("text").value)
+        let str = ''
+        str += "nhiệt độ k: " + dc.K() + " <br>"
+        str += ("nhiệt độ f: " + dc.F())
+        document.getElementById("print").innerHTML = str
+    }
+
+
+</script>
