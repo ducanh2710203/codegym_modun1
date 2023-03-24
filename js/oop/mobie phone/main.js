@@ -1,0 +1,8 @@
+let sam = new mobile("samsung")
+let iphone = new mobile("iphone")
+sam.writeMessage("hello")
+iphone.sendMessage("iphone",sam)
+sam.sendMessage('samsung',iphone)
+console.log(iphone.outbox)
+console.log(sam.inbox)
+iphone.getoutbox()

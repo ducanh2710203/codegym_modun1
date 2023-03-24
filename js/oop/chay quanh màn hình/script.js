@@ -45,17 +45,18 @@ function Hero(image, top, left, size, speed) {
 
 }
 
-let hero = new Hero('phai.png', 0, 0, 200);
-let hero1 = new Hero('xuong.png', 0, 0, 200);
-let hero2 = new Hero('lenTren.png', 0, 0, 200);
-let hero3 = new Hero('lenTren.png', 0, 0, 200);
+let hero = new Hero('phai.png', 0, 0, 200)
+let hero = new Hero('trai.png', 0, 0, 200)
+
+
 
 function start() {
-    if (hero.left < window.innerWidth - hero.size && hero.top == 0) {
+    if (hero.left < window.innerWidth - hero.size && hero.top <= 0) {
         hero.moveRight();
+
     } else if (hero.top < window.innerHeight - hero.size && hero.left > hero.size) {
-        hero1.movedown()
-    } else if (hero.left > 20) {
+        hero.movedown()
+    } else if (hero.left > -100) {
         hero.moveleft();
     } else if (hero.top > -hero.size) {
         hero.movetop()
