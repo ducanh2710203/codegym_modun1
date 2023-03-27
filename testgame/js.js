@@ -34,7 +34,6 @@ function clearCanvas(){
 }
 var j = 0
 var arr=[]
-var ten = []
 var a = ''
 function start() {
      a = prompt("nhập tên của bạn")
@@ -53,20 +52,36 @@ function start() {
     console.log(arr[j])
     document.getElementById("text").innerHTML="thằng "+a+" in được "+arr[j]
     j++
+    if (a==="end"){
+        let max = arr[0]
+
+        for (let i = 0; i < arr.length; i++) {
+            if (max<arr[i]){
+                max = arr[i]
+            }
 
 
-}
-function end() {
-    let max = arr[0]
-    console.log(arr)
-    console.log(name)
-    for (let i = 0; i < arr.length; i++) {
-         if (max<arr[i]){
-             max = arr[i]
-         }
-
-
+        }
+        document.getElementById("text").innerHTML="thằng thắng có số bóng là "+max
+        clearCanvas()
     }
-    document.getElementById("text").innerHTML="thằng thắng có số bóng là "+max
-    clearCanvas()
+
+
 }
+function init() {
+    document.getElementById("end").style.Top = "0px";
+    document.getElementById("end").style.Left = "0px";
+}
+
+function mousemove() {
+
+
+    document.getElementById("end").style.marginTop = parseInt(document.getElementById("end").style.top) + parseInt(Math.floor(Math.random() * 500)) + 'px'
+    document.getElementById("end").style.marginTop = parseInt(document.getElementById("end").style.top) + parseInt(Math.floor(Math.random() * 500)) + 'px'
+    document.getElementById("end").style.marginLeft = parseInt(document.getElementById("end").style.top) + parseInt(Math.floor(Math.random() * 400)) + 'px'
+    document.getElementById("end").style.marginRight = parseInt(document.getElementById("end").style.top) + parseInt(Math.floor(Math.random() * 400)) + 'px'
+    console.log(document.getElementById("end"));
+
+
+}
+window.onload = init();
