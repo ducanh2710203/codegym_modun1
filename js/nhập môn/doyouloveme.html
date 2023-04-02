@@ -20,7 +20,7 @@
 </style>
 
 <body>
-    <h1>Do you love me</h1>
+    <h1>tft đi</h1>
     <button onclick="clickyes()"  > yes</button>   
     <button id="no" style="position: absolute; top: 0px;" onmousemove="mousemove()"> no</button>
 </body>
@@ -31,10 +31,7 @@
         document.getElementById("no").style.Top = "0px";
         document.getElementById("no").style.Left = "0px";
     }
-    function clickyes() {
-        alert("chơi mẹ nhau đi");
 
-    }
     function mousemove() {
    
 
@@ -44,6 +41,10 @@
         document.getElementById("no").style.marginRight = parseInt(document.getElementById("no").style.top) + parseInt(Math.floor(Math.random() * 400)) + 'px'
         console.log(document.getElementById("no"));
         
+
+    }
+    function clickyes() {
+        alert("chơi mẹ nhau đi");
 
     }
     window.onload = init();
